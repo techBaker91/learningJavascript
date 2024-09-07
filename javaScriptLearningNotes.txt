@@ -1,0 +1,1004 @@
+One of many JavaScript HTML methods is getElementByID()
+In HTML, JavaScript code is inserted between <script> and </script> tags.
+JavaScript is the default scripting language in HTML
+Scripts can be placed in the <body>, or in the <head> section of an HTML page, or in both.
+External scripts are practical when the same code is used in many different web pages.
+JavaScript files have the file extension .js.
+To use an external script, put the name of the script file in the src (source) attribute of a <script> tag:
+External scripts cannot contain <script> tags.
+It separates HTML and code
+It makes HTML and JavaScript easier to read and maintain
+Cached JavaScript files can speed up page loads
+A computer program is a list of "instructions" to be "executed" by a computer.
+
+In a programming language, these programming instructions are called statements.
+A JavaScript program is a list of programming statements.
+In HTML, JavaScript programs are executed by the web browser.
+If a JavaScript statement does not fit on one line, the best place to break it is after an operator
+// How to create variables:
+var x;
+let y;
+
+// How to use variables:
+x = 5;
+y = 6;
+let z = x + y;
+A JavaScript name must begin with: A letter (A-Z or a-z), A dollar sign ($), Or an underscore (_)
+Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+Use underscore, upper or lower camel case ex: firstName
+
+When to Use var, let, or const?
+
+1. Always declare variables
+
+2. Always use const if the value should not be changed
+
+3. Always use const if the type should not be changed (Arrays and Objects)
+
+4. Only use let if you can't use const
+
+5. Only use var if you MUST support old browsers.
+Use const when you declare: A new Array, A new Object, A new Function, A new RegExp
+
+The object data type can contain both built-in objects, and user defined objects:
+Built-in object types can be: objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more
+JavaScript arrays are written with square brackets.
+JavaScript objects are written with curly braces {}
+A function is written with, function anynamehere(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+The code inside the fuction will execute when something invokes (calls) the function. This can be when an event happens like a user clicking the mouse, when it is invoked from javascript code, or automatically invoked (self invoked)
+When JavaScript reaches a return statement, the function will stop executing.
+With functions you can reuse code
+You can write code that can be used many times.
+You can use the same code with different arguments, to produce different results.
+The () operator invokes (calls) the function:
+
+Object Properties
+A real life car has properties like weight and color:
+car.name = Fiat, car.model = 500, car.weight = 850kg, car.color = white.
+Car objects have the same properties, but the values differ from car to car.
+
+Object Methods
+A real life car has methods like start and stop:
+car.start(), car.drive(), car.brake(), car.stop().
+Car objects have the same methods, but the methods are performed at different times.
+
+JavaScript Variables
+JavaScript variables are containers for data values.
+This code assigns a simple value (Fiat) to a variable named car: let car = "Fiat";
+Objects are variables too. But objects can contain many values. 
+An object literal is a list of name:value pairs inside curly braces {}
+{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+name:value pairs are also called key:value pairs.
+object literals are also called object initializers.
+For readability, simplicity and execution speed, use the object literal method.
+Objects written as name value pairs are similar to:
+    Associative arrays in PHP
+    Dictionaries in Python
+    Hash tables in C
+    Hash maps in Java
+    Hashes in Ruby and Perl
+if you Understand Objects, you Understand JavaScript.
+Objects are containers for Properties and Methods.
+Properties are named Values.
+Methods are Functions stored as Properties.
+Properties can be primitive values, functions, or even other objects.
+    Objects are objects
+    Maths are objects
+    Functions are objects
+    Dates are objects
+    Arrays are objects
+    Maps are objects
+    Sets are objects
+All JavaScript values, except primitives, are objects
+JavaScript defines 7 types of primitive data types:
+    string
+    number
+    boolean
+    null
+    undefined
+    symbol
+    bigint
+Properties can be changed, added, deleted, and some are read only.
+	// objectName.property
+	let age = person.age;
+
+	or
+	//objectName["property"]
+	let age = person["age"];
+
+	or
+	//objectName[expression]
+	let age = person[x];
+Nested Objects
+	Property values in an object can be other objects:
+
+	myObj = {
+	  name:"John",
+	  age:30,
+	  myCars: {
+	    car1:"Ford",
+	    car2:"BMW",
+	    car3:"Fiat"
+	  }
+	}
+Object methods are actions that can be performed on objects.
+A method is a function definition stored as a property value.
+Some solutions to display JavaScript objects are:
+    Displaying the Object Properties by name
+    Displaying the Object Properties in a Loop
+    Displaying the Object using Object.values()
+    Displaying the Object using JSON.stringify()
+JavaScript objects can be converted to a string with JSON method JSON.stringify().
+JSON.stringify() is included in JavaScript and supported in all major browsers.
+
+Object Constructor Functions
+Sometimes we need to create many objects of the same type.
+To create an object type we use an object constructor function.
+It is considered good practice to name constructor functions with an upper-case first letter.
+Adding a Property to an Object
+
+	Adding a property to a created object is easy:
+	Example
+	myFather.nationality = "English";
+Adding a Property to a Constructor
+
+	You can NOT add a new property to an object constructor:
+	Example
+	Person.nationality = "English";
+
+	To add a new property, you must add it to the constructor function prototype:
+	Example
+	Person.prototype.nationality = "English";
+Adding a Method to an Object
+
+	Adding a method to a created object is easy:
+	Example
+	myMother.changeName = function (name) {
+	  this.lastName = name;
+	}
+Adding a Method to a Constructor
+
+	You cannot add a new method to an object constructor function.
+
+	This code will produce a TypeError:
+	Example
+	Person.changeName = function (name) {
+	  this.lastName = name;
+	}
+
+	myMother.changeName("Doe");
+uilt-in JavaScript Constructors
+
+JavaScript has built-in constructors for all native objects:
+	new Object()   // A new Object object
+	new Array()    // A new Array object
+	new Map()      // A new Map object
+	new Set()      // A new Set object
+	new Date()     // A new Date object
+	new RegExp()   // A new RegExp object
+	new Function() // A new Function object
+Use object literals {} instead of new Object().
+Use array literals [] instead of new Array().
+Use pattern literals /()/ instead of new RegExp().
+Use function expressions () {} instead of new Function()
+An HTML event can be something the browser does, or something a user does.
+
+Here are some examples of HTML events:
+
+    An HTML web page has finished loading
+    An HTML input field was changed
+    An HTML button was clicked
+Here is a list of some common HTML events:
+Event 	Description
+	onchange 	An HTML element has been changed
+	onclick 	The user clicks an HTML element
+	onmouseover 	The user moves the mouse over an HTML element
+	onmouseout 	The user moves the mouse away from an HTML element
+	onkeydown 	The user pushes a keyboard key
+	onload 	The browser has finished loading the page
+	THERE ARE MANY MORE
+Event handlers can be used to handle and verify user input, user actions, and browser actions:
+
+    Things that should be done every time a page loads
+    Things that should be done when the page is closed
+    Action that should be performed when a user clicks a button
+    Content that should be verified when a user inputs data
+    And more ...
+
+Many different methods can be used to let JavaScript work with events:
+
+    HTML event attributes can execute JavaScript code directly
+    HTML event attributes can call JavaScript functions
+    You can assign your own event handler functions to HTML elements
+    You can prevent events from being sent or being handled
+    And more ...
+Template Strings
+
+Templates were introduced with ES6 (JavaScript 2016).
+
+Templates are strings enclosed in backticks (`This is a template string`).
+
+Templates allow single and double quotes inside a string:
+
+Templates allow multiline strings:
+
+Templates are not supported in Internet Explorer.
+The backslash escape character (\) turns special characters into string characters:
+let text = "We are the so-called \"Vikings\" from the north.";
+Breaking Long Lines
+
+For readability, programmers often like to avoid long code lines.
+
+A safe way to break up a statement is after an operator:
+Comparing two JavaScript objects always returns false.
+With BigInt the total number of supported data types in JavaScript is 8:
+
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object 
+It is a common practice to declare arrays with the const keyword.
+Spaces and line breaks are not important. A declaration can span multiple lines:
+
+const cars = [
+  "Saab",
+  "Volvo",
+  "BMW"
+]; 
+You can also create an array, and then provide the elements:
+
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+Arrays are Objects
+
+Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+
+But, JavaScript arrays are best described as arrays.
+
+Arrays use numbers to access its "elements". In this example, person[0] returns John:
+Array:
+const person = ["John", "Doe", 46];
+
+Array Elements Can Be Objects
+JavaScript variables can be objects. Arrays are special kinds of objects.
+Because of this, you can have variables of different types in the same Array.
+You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+Associative Arrays
+
+Many programming languages support arrays with named indexes.
+
+Arrays with named indexes are called associative arrays (or hashes).
+
+JavaScript does not support arrays with named indexes.
+
+In JavaScript, arrays always use numbered indexes.
+
+The Difference Between Arrays and Objects
+
+In JavaScript, arrays use numbered indexes.  
+
+In JavaScript, objects use named indexes. 
+JavaScript does not support associative arrays.
+You should use objects when you want the element names to be strings (text).
+You should use arrays when you want the element names to be numbers
+How to Recognize an Array
+
+A common question is: How do I know if a variable is an array?
+
+The problem is that the JavaScript operator typeof returns "object":
+const fruits = ["Banana", "Orange", "Apple"];
+let type = typeof fruits;
+
+The typeof operator returns object because a JavaScript array is an object.
+Solution 1:
+
+To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():
+Array.isArray(fruits);
+
+The instanceof operator returns true if an object is created by a given constructor:
+const fruits = ["Banana", "Orange", "Apple"];
+
+(fruits instanceof Array);
+
+Nested Arrays and Objects
+
+Values in objects can be arrays, and values in arrays can be objects:
+Example
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+JavaScript Array join()
+
+The join() method also joins all array elements into a string.
+
+It behaves just like toString(), but in addition you can specify the separator:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+Result:
+Banana * Orange * Apple * Mango
+
+Warning !
+Using delete() leaves undefined holes in the array.
+Use pop() or shift() instead.
+
+Splicing and Slicing Arrays
+The splice() method adds new items to an array.
+The slice() method slices out a piece of an array.
+
+The difference between toSorted() and sort() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.
+The difference between toReversed() and reverse() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.
+
+Comparing For and While
+If you have read the previous chapter, about the for loop, you will discover that a while loop is much the same as a for loop, with statement 1 and statement 3 omitted.
+
+String, Array, TypedArray, Map and Set are all iterables, because their prototype objects have a Symbol.iterator method.
+	A JavaScript iterable is an object that has a Symbol.iterator.
+	The Symbol.iterator is a function that returns a next() function.
+	An iterable can be iterated over with the code: for (const x of iterable) { } 
+	The Symbol.iterator method is called automatically by for..of.
+
+But we can also do it "manually":
+Example
+	let iterator = myNumbers[Symbol.iterator]();
+
+	while (true) {
+	  const result = iterator.next();
+	  if (result.done) break;
+	  // Any Code Here
+	}
+
+JavaScript Sets
+
+	A JavaScript Set is a collection of unique values.
+	Each value can only occur once in a Set.
+	The values can be of any type, primitive values or objects.
+How to Create a Set
+	You can create a JavaScript Set by:
+    Passing an array to new Set()
+    Create an empty set and use add() to add values
+The keys() Method
+	The keys() method returns an Iterator object with the values in a Set:
+	Note
+	A Set has no keys, so keys() returns the same as values().
+	This makes Sets compatible with Maps.
+The entries() Method
+	The entries() method returns an Iterator with [value,value] pairs from a Set.
+	Note
+	The entries() method is supposed to return a [key,value] pair from an object.
+	A Set has no keys, so the entries() method returns [value,value].
+	This makes Sets compatible with Maps.
+
+JavaScript Maps
+
+	A Map holds key-value pairs where the keys can be any datatype.
+	A Map remembers the original insertion order of the keys.
+	How to Create a Map
+	You can create a JavaScript Map by:
+	    Passing an Array to new Map()
+	    Create a Map and use Map.set()
+	// Create a Map
+	const fruits = new Map([
+	  ["apples", 500],
+	  ["bananas", 300],
+	  ["oranges", 200]
+	]);
+	// Create a Map
+	const fruits = new Map([["apples", 500],["bananas", 300],["oranges", 200]]);
+	Maps are Objects
+
+	JavaScript Objects vs Maps
+
+	Differences between JavaScript Objects and Maps:
+
+	Object													Map
+	Not directly iterable 									Directly iterable
+	Do not have a size property 							Have a size property
+	Keys must be Strings (or Symbols) 						Keys can be any datatype
+	Keys are not well ordered 								Keys are ordered by insertion
+	Have default keys 										Do not have default keys
+
+	Being able to use objects as keys is an important Map feature.
+
+	JavaScript Map.groupBy()
+
+	ES2024 added the Map.groupBy() method to JavaScript.
+	The Map.groupBy() method groups elements of an object according to string values returned from a callback function.
+	The Map.groupBy() method does not change the original object.
+
+	Object.groupBy() vs Map.groupBy()
+
+	The difference between Object.groupBy() and Map.groupBy() is:
+	Object.groupBy() groups elements into a JavaScript object.
+	Map.groupBy() groups elements into a Map object.
+
+Complex Data Types
+
+	A complex data type can store multiple values and/or different data types together.
+	JavaScript has one complex data type:
+
+	    object
+
+	All other complex types like arrays, functions, sets, and maps are just different types of objects.
+	The typeof operator returns only two types:
+
+	    object
+	    function
+
+Converting Strings to Numbers
+
+	The global method Number() converts a variable (or a value) into a number.
+	A numeric string (like "3.14") converts to a number (like 3.14).
+	An empty string (like "") converts to 0.
+	A non numeric string (like "John") converts to NaN (Not a Number).
+
+Converting Dates to Strings
+
+	The global method String() can convert dates to strings.
+	String(Date())  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+
+	The Date method toString() does the same.
+	Example
+	Date().toString()  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+
+What Is a Regular Expression?
+
+	A regular expression is a sequence of characters that forms a search pattern.
+	When you search for data in a text, you can use this search pattern to describe what you are searching for.
+	A regular expression can be a single character, or a more complicated pattern.
+	Regular expressions can be used to perform all types of text search and text replace operations.
+	Syntax:
+	/pattern/modifiers; 
+
+JavaScript try and catch
+
+	The try statement allows you to define a block of code to be tested for errors while it is being executed.
+	The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+	The JavaScript statements try and catch come in pairs:
+	try {
+	  Block of code to try
+	}
+	catch(err) {
+	  Block of code to handle errors
+	} 
+
+JavaScript Scope
+
+	Before ES6 (2015), JavaScript variables had only Global Scope and Function Scope.
+	ES6 introduced two important new JavaScript keywords: let and const.
+	These two keywords provide Block Scope in JavaScript.
+	Variables declared inside a { } block cannot be accessed from outside the block:
+	Variables declared with the var keyword can NOT have block scope.
+	Variables declared inside a { } block can be accessed from outside the block. 
+	Variables declared within a JavaScript function, are LOCAL to the function
+	Local variables are created when a function starts, and deleted when the function is completed.
+	Variables declared with var, let and const are quite similar when declared inside a function.
+	They all have Function Scope
+	Global variables defined with the var keyword belong to the window object:
+	Example
+	var carName = "Volvo";
+	// code here can use window.carName
+
+	Global variables defined with the let keyword do not belong to the window object:
+	Example
+	let carName = "Volvo";
+	// code here can not use window.carName 
+
+Declare Your Variables At the Top !
+
+	Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.
+	If a developer doesn't understand hoisting, programs may contain bugs (errors).
+	To avoid bugs, always declare all variables at the beginning of every scope.
+	Since this is how JavaScript interprets the code, it is always a good rule.
+
+JavaScript Arrow Function
+
+	Before Arrow:
+	hello = function() {
+	  return "Hello World!";
+	}
+
+	With Arrow Function:
+	hello = () => {
+	  return "Hello World!";
+	}
+
+	It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword:
+
+	Arrow Functions Return Value by Default:
+	hello = () => "Hello World!"; 
+
+	Arrow Function With Parameters:
+	hello = (val) => "Hello " + val;  
+
+Modules
+
+	JavaScript modules allow you to break up your code into separate files.
+
+	This makes it easier to maintain a code-base.
+
+	Modules are imported from external files with the import statement.
+
+	Modules also rely on type="module" in the <script> tag.
+	Example
+	<script type="module">
+	import message from "./message.js";
+	</script> 
+
+JavaScript JSON
+
+	JSON is a format for storing and transporting data.
+
+	JSON is often used when data is sent from a server to a web page.
+	What is JSON?
+
+	    JSON stands for JavaScript Object Notation
+	    JSON is a lightweight data interchange format
+	    JSON is language independent *
+	    JSON is "self-describing" and easy to understand
+
+	* The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+	JSON Example
+
+	This JSON syntax defines an employees object: an array of 3 employee records (objects):
+	JSON Example
+	{
+	"employees":[
+	  {"firstName":"John", "lastName":"Doe"},
+	  {"firstName":"Anna", "lastName":"Smith"},
+	  {"firstName":"Peter", "lastName":"Jones"}
+	]
+	}
+
+Loading JavaScript in HTML
+
+	Use simple syntax for loading external scripts (the type attribute is not necessary):
+	<script src="myscript.js"></script>
+
+File Extensions
+
+	HTML files should have a .html extension (.htm is allowed).
+
+	CSS files should have a .css extension.
+
+	JavaScript files should have a .js extension.
+
+Best Practices
+
+	Avoid global variables, avoid new, avoid ==, avoid eval()
+	All variables used in a function should be declared as local variables.
+	come global variables.
+	It is a good coding practice to put all declarations at the top of each script or function.
+	It is a good coding practice to initialize variables when you declare them.
+	Declaring objects with const will prevent any accidental change of type
+	Declaring arrays with const will prevent any accidential change of type
+	The == comparison operator always converts (to matching types) before comparison.
+	The === operator forces comparison of values and type
+	Undefined values can break your code. It is a good habit to assign default values to arguments.
+	Always end your switch statements with a default. Even if you think there is no need for it.
+	Always treat numbers, strings, or booleans as primitive values. Not as objects.
+
+Performance
+	
+	Reduce Activity in Loops
+
+	Loops are often used in programming.
+	Each statement in a loop, including the for statement, is executed for each iteration of the loop.
+	Statements or assignments that can be placed outside the loop will make the loop run faster. 
+	Bad:
+	for (let i = 0; i < arr.length; i++) {
+	Better Code:
+	let l = arr.length;
+	for (let i = 0; i < l; i++) {
+
+	Reduce DOM Access
+
+	Accessing the HTML DOM is very slow, compared to other JavaScript statements.
+	If you expect to access a DOM element several times, access it once, and use it as a local variable:
+	Example
+	const obj = document.getElementById("demo");
+	obj.innerHTML = "Hello";
+
+	Avoid Unnecessary Variables
+
+	Don't create new variables if you don't plan to save values.
+
+	Often you can replace code like this:
+	let fullName = firstName + " " + lastName;
+	document.getElementById("demo").innerHTML = fullName;
+
+	With this:
+	document.getElementById("demo").innerHTML = firstName + " " + lastName;
+
+	Delay JavaScript Loading
+
+	Putting your scripts at the bottom of the page body lets the browser load the page first.
+	While a script is downloading, the browser will not start any other downloads. In addition all parsing and rendering activity might be blocked.
+	The HTTP specification defines that browsers should not download more than two components in parallel.
+
+	If possible, you can add your script to the page by code, after the page has loaded:
+	Example:
+	<script>
+	window.onload = function() {
+	  const element = document.createElement("script");
+	  element.src = "myScript.js";
+	  document.body.appendChild(element);
+	};
+	</script>
+
+Property Management Methods
+
+	// Adding or changing an object property
+	Object.defineProperty(object, property, descriptor)
+
+	// Adding or changing object properties
+	Object.defineProperties(object, descriptors)
+
+	// Accessing a Property
+	Object.getOwnPropertyDescriptor(object, property)
+
+	// Accessing Properties
+	Object.getOwnPropertyDescriptors(object)
+
+	// Returns all properties as an array
+	Object.getOwnPropertyNames(object)
+
+	// Accessing the prototype
+	Object.getPrototypeOf(object)
+
+Changing Meta Data
+
+	The following property meta data can be changed:
+
+	writable : true      // Property value can be changed
+	enumerable : true    // Property can be enumerated
+	configurable : true  // Property can be reconfigured
+	writable : false     // Property value can not be changed
+	enumerable : false   // Property can be not enumerated
+	configurable : false // Property can be not reconfigured
+
+	Getters and setters can also be changed:
+
+	// Defining a getter
+	get: function() { return language }
+	// Defining a setter
+	set: function(value) { language = value }
+
+Why Using Getters and Setters?
+
+    It gives simpler syntax
+    It allows equal syntax for properties and methods
+    It can secure better data quality
+    It is useful for doing things behind-the-scenes
+
+Object Protection Methods
+	// Prevents re-assignment
+	const car = {type:"Fiat", model:"500", color:"white"};
+
+	// Prevents adding object properties
+	Object.preventExtensions(object)
+
+	// Returns true if properties can be added to an object
+	Object.isExtensible(object)
+
+	// Prevents adding and deleting object properties
+	Object.seal(object)
+
+	// Returns true if object is sealed
+	Object.isSealed(object)
+
+	// Prevents any changes to an object
+	Object.freeze(object)
+
+	// Returns true if object is frozen
+	Object.isFrozen(object)
+
+JavaScript Object.seal()
+
+	The Object.seal() method prevents additions or deletions of new properties.
+
+	The Object.seal() method makes existing properties non-configurable.
+
+	The Object.isSealed() method can be used to check if an object is sealed.
+
+Arrow Functions
+
+	Arrow functions allows a short syntax for writing function expressions.
+
+	You don't need the function keyword, the return keyword, and the curly brackets.
+	Example
+	// ES5
+	var x = function(x, y) {
+	  return x * y;
+	}
+
+	// ES6
+	const x = (x, y) => x * y;
+
+JavaScript Function call()
+
+	Method Reuse
+
+	With the call() method, you can write a method that can be used on different objects.
+	All Functions are Methods
+
+	In JavaScript all functions are object methods.
+
+	If a function is not a method of a JavaScript object, it is a function of the global object (see previous chapter).
+
+	The example below creates an object with 3 properties, firstName, lastName, fullName.
+
+What is this?
+
+	In JavaScript, the this keyword refers to an object.
+
+	The this keyword refers to different objects depending on how it is used:
+	In an object method, this refers to the object.
+	Alone, this refers to the global object.
+	In a function, this refers to the global object.
+	In a function, in strict mode, this is undefined.
+	In an event, this refers to the element that received the event.
+	Methods like call(), apply(), and bind() can refer this to any object.
+
+The Constructor Method
+
+	The constructor method is a special method:
+
+	    It has to have the exact name "constructor"
+	    It is executed automatically when a new object is created
+	    It is used to initialize object properties
+
+	If you do not define a constructor method, JavaScript will add an empty constructor method. 
+
+The HTML DOM (Document Object Model)
+
+	When a web page is loaded, the browser creates a Document Object Model of the page.
+
+	The HTML DOM model is constructed as a tree of Objects:
+	The HTML DOM Tree of Objects
+	DOM HTML tree
+
+	With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+	    JavaScript can change all the HTML elements in the page
+	    JavaScript can change all the HTML attributes in the page
+	    JavaScript can change all the CSS styles in the page
+	    JavaScript can remove existing HTML elements and attributes
+	    JavaScript can add new HTML elements and attributes
+	    JavaScript can react to all existing HTML events in the page
+	    JavaScript can create new HTML events in the page
+
+	What is the DOM?
+
+	The DOM is a W3C (World Wide Web Consortium) standard.
+
+	The DOM defines a standard for accessing documents:
+
+	"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+
+	The W3C DOM standard is separated into 3 different parts:
+
+	    Core DOM - standard model for all document types
+	    XML DOM - standard model for XML documents
+	    HTML DOM - standard model for HTML documents
+
+	What is the HTML DOM?
+
+	The HTML DOM is a standard object model and programming interface for HTML. It defines:
+
+	    The HTML elements as objects
+	    The properties of all HTML elements
+	    The methods to access all HTML elements
+	    The events for all HTML elements
+
+	In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+	Finding HTML Elements
+
+	Often, with JavaScript, you want to manipulate HTML elements.
+
+	To do so, you have to find the elements first. There are several ways to do this:
+
+	    Finding HTML elements by id
+	    Finding HTML elements by tag name
+	    Finding HTML elements by class name
+	    Finding HTML elements by CSS selectors
+	    Finding HTML elements by HTML object collections
+
+	The following HTML objects (and object collections) are also accessible:
+
+	    document.anchors
+	    document.body
+	    document.documentElement
+	    document.embeds
+	    document.forms
+	    document.head
+	    document.images
+	    document.links
+	    document.scripts
+	    document.title
+
+JavaScript Window - The Browser Object Model
+
+	The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.
+
+	The Browser Object Model (BOM)
+	There are no official standards for the Browser Object Model (BOM).
+
+	Since modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM.
+	
+	The Window Object
+	The window object is supported by all browsers. It represents the browser's window.
+
+	All global JavaScript objects, functions, and variables automatically become members of the window object.
+
+	Global variables are properties of the window object.
+
+	Global functions are methods of the window object.
+
+	Even the document object (of the HTML DOM) is a property of the window object: 
+
+Storage Object Properties and Methods
+
+	Property/Method 				Description
+	key(n) 							Returns the name of the nth key in the storage
+	length 							Returns the number of data items stored in the Storage object
+	getItem(keyname) 				Returns the value of the specified key name
+	setItem(keyname, value) 		Adds a key to the storage, or updates a key value (if it already exists)
+	removeItem(keyname) 			Removes that key from the storage
+	clear() 						Empty all key out of the storage
+
+	Related Pages for Web Storage API
+	Property 				Description
+	window.localStorage 	Allows to save key/value pairs in a web browser. Stores the data with no expiration date
+
+	window.sessionStorage 	Allows to save key/value pairs in a web browser. Stores the data for one session
+
+What is AJAX?
+
+	AJAX = Asynchronous JavaScript And XML.
+
+	AJAX is not a programming language.
+
+	AJAX just uses a combination of:
+
+		A browser built-in XMLHttpRequest object (to request data from a web server)
+		JavaScript and HTML DOM (to display or use the data)
+
+	How AJAX Works
+
+		1. An event occurs in a web page (the page is loaded, a button is clicked)
+		2. An XMLHttpRequest object is created by JavaScript
+		3. The XMLHttpRequest object sends a request to a web server
+		4. The server processes the request
+		5. The server sends a response back to the web page
+		6. The response is read by JavaScript
+		7. Proper action (like page update) is performed by JavaScript
+
+	Modern Browsers (Fetch API)
+
+		Modern Browsers can use Fetch API instead of the XMLHttpRequest Object.
+
+		The Fetch API interface allows web browser to make HTTP requests to web servers.
+
+		If you use the XMLHttpRequest Object, Fetch can do the same in a simpler way.
+
+	GET or POST?
+
+		GET is simpler and faster than POST, and can be used in most cases.
+
+		However, always use POST requests when:
+
+			A cached file is not an option (update a file or database on the server).
+			Sending a large amount of data to the server (POST has no size limitations).
+			Sending user input (which can contain unknown characters), POST is more robust and secure than GET.
+
+What is JSON?
+
+    JSON stands for JavaScript Object Notation
+    JSON is a lightweight data-interchange format
+    JSON is plain text written in JavaScript object notation
+    JSON is used to send data between computers
+    JSON is language independent *
+
+	Why Use JSON?
+
+	The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
+
+	Since the format is text only, JSON data can easily be sent between computers, and used by any programming language.
+
+	JavaScript has a built in function for converting JSON strings into JavaScript objects:
+
+	JSON.parse()
+
+	JavaScript also has a built in function for converting an object into a JSON string:
+
+	JSON.stringify()
+
+	JSON Syntax Rules
+
+		JSON syntax is derived from JavaScript object notation syntax:
+
+		Data is in name/value pairs
+		Data is separated by commas
+		Curly braces hold objects
+		Square brackets hold arrays
+
+	JSON Values
+
+	In JSON, values must be one of the following data types:
+
+		a string
+		a number
+		an object
+		an array
+		a boolean
+		null
+
+	In JavaScript values can be all of the above, plus any other valid JavaScript expression, including:
+
+		a function
+		a date
+		undefined
+
+	JSON Files
+
+    The file type for JSON files is ".json"
+    The MIME type for JSON text is "application/json"
+
+	JSON is Like XML Because
+
+		Both JSON and XML are "self describing" (human readable)
+		Both JSON and XML are hierarchical (values within values)
+		Both JSON and XML can be parsed and used by lots of programming languages
+		Both JSON and XML can be fetched with an XMLHttpRequest
+
+	JSON is Unlike XML Because
+
+		JSON doesn't use end tag
+		JSON is shorter
+		JSON is quicker to read and write
+		JSON can use arrays
+
+	The biggest difference is:
+
+		XML has to be parsed with an XML parser. JSON can be parsed by a standard JavaScript function.
+		Why JSON is Better Than XML
+
+		XML is much more difficult to parse than JSON.
+		JSON is parsed into a ready-to-use JavaScript object.
+
+	For AJAX applications, JSON is faster and easier than XML:
+
+		Using XML
+
+			Fetch an XML document
+			Use the XML DOM to loop through the document
+			Extract values and store in variables
+
+		Using JSON
+
+			Fetch a JSON string
+			JSON.Parse the JSON string
+
+
+
+
